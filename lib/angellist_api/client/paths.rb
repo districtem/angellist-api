@@ -19,10 +19,10 @@ module AngellistApi
       # @param options [Hash] A customizable set of options.
       # @option options [Array] :user_ids Show paths between you and a list of comma separate user_ids (up to 20).
       #    @example Get paths for a batch of users.
-      #    AngellistApi.get_paths([123, 456, 789])
+      #    AngellistApi.get_paths([123, 456, 789]) 
       # @option options [Array] :startup_ids Show paths between you and a list of comma separated startup_ids (up to 20).
       #    @example Get paths for a batch of startups.
-      #    AngellistApi.get_paths([001, 002, 003])
+      #    AngellistApi.get_paths([001, 002, 003]) 
       # @option options [String] :direction following | followed
       #    @example Get paths for me and these users with a direction of following
       #    AngellistApi.get_paths([123, 456, 789], :direction => 'following')
@@ -30,7 +30,7 @@ module AngellistApi
       def get_paths(options={})
           #user_ids = [123, 456, 789] Example for using IDs
           #direction = "following" Example for using direction
-          #options = { :ids => ids.join(','), :direction => ('') } Example options with IDs and direction
+          #options = { :user_ids => user_ids.join(','), :direction => ('') } Example options with IDs and direction
         options = {:some => "options "}
         get("1/paths", options)
       end
